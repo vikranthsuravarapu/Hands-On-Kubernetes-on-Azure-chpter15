@@ -59,7 +59,7 @@ jobs:
 
       - name: Helm upgrade
         run: |
-          helm upgrade website /website --install \
+          helm upgrade website ./website --install \
             --set image.repository=$ACRNAME.azurecr.io/website/website \
             --set image.tag=${{ github.run_number }}
 
